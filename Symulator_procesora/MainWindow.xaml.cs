@@ -16,28 +16,27 @@ using System.ComponentModel;
 
 namespace Symulator_procesora
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
 
-            Text_ax.Text = string.Empty;
-            Text_bx.Text = string.Empty;
-            Text_cx.Text = string.Empty;
-            Text_dx.Text = string.Empty;
+            //Text_ax.Text = string.Empty;
+            //Text_bx.Text = string.Empty;
+            //Text_cx.Text = string.Empty;
+            //Text_dx.Text = string.Empty;
 
-            Text_ah.Text = string.Empty;
-            Text_al.Text = string.Empty;
-            Text_bh.Text = string.Empty;
-            Text_bl.Text = string.Empty;
-            Text_ch.Text = string.Empty;
-            Text_cl.Text = string.Empty;
-            Text_dh.Text = string.Empty;
-            Text_dl.Text = string.Empty;
+            //Text_ah.Text = string.Empty;
+            //Text_al.Text = string.Empty;
+            //Text_bh.Text = string.Empty;
+            //Text_bl.Text = string.Empty;
+            //Text_ch.Text = string.Empty;
+            //Text_cl.Text = string.Empty;
+            //Text_dh.Text = string.Empty;
+            //Text_dl.Text = string.Empty;
+
+
         }
 
         public string pushAX = string.Empty;
@@ -54,24 +53,45 @@ namespace Symulator_procesora
         public string pushDH = string.Empty;
         public string pushDL = string.Empty;
 
-        //private void textBox1_Validating(object sender, CancelEventArgs e)
-        //{
-        //    char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
-
-        //    foreach (char character in textBox1.Text.ToUpper().ToArray())
-        //    {
-        //        if (!allowedChars.Contains(character))
-        //        {
-        //            System.Windows.Forms.MessageBox.Show(string.Format("'{0}' is not a hexadecimal character", character));
-        //            e.Cancel = true;
-        //        }
-        //    }
-        //}
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
 
+
+            foreach (char character in Text_ax.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_ax.Text = Text_ax.Text.Substring(0, Text_ax.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_bx.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_bx.Text = Text_bx.Text.Substring(0, Text_bx.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_cx.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_cx.Text = Text_cx.Text.Substring(0, Text_cx.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_dx.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_dx.Text = Text_dx.Text.Substring(0, Text_dx.Text.Length - 1);
+                }
+            }
         }
+
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
@@ -80,7 +100,72 @@ namespace Symulator_procesora
 
         private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
         {
+            char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
 
+            foreach (char character in Text_ah.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_ah.Text = Text_ah.Text.Substring(0, Text_ah.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_al.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_al.Text = Text_al.Text.Substring(0, Text_al.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_bh.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_bh.Text = Text_bh.Text.Substring(0, Text_bh.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_bl.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_bl.Text = Text_bl.Text.Substring(0, Text_bl.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_ch.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_ch.Text = Text_ch.Text.Substring(0, Text_ch.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_cl.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_cl.Text = Text_cl.Text.Substring(0, Text_cl.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_dh.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_dh.Text = Text_dh.Text.Substring(0, Text_dh.Text.Length - 1);
+                }
+            }
+            foreach (char character in Text_dl.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_dl.Text = Text_dl.Text.Substring(0, Text_dl.Text.Length - 1);
+                }
+            }
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -109,10 +194,10 @@ namespace Symulator_procesora
         {
             //Random AX
             Random random = new Random();
-            int num1 = random.Next(0, 17);
-            int num2 = random.Next(0, 17);
-            int num3 = random.Next(0, 17);
-            int num4 = random.Next(0, 17);
+            int num1 = random.Next(0, 16);
+            int num2 = random.Next(0, 16);
+            int num3 = random.Next(0, 16);
+            int num4 = random.Next(0, 16);
             string randomHex1 = num1.ToString("X");
             string randomHex2 = num2.ToString("X");
             string randomHex3 = num3.ToString("X");
@@ -122,10 +207,10 @@ namespace Symulator_procesora
             Text_al.Text = randomHex3 + randomHex4;
 
             //Random BX
-            num1 = random.Next(0, 17);
-            num2 = random.Next(0, 17);
-            num3 = random.Next(0, 17);
-            num4 = random.Next(0, 17);
+            num1 = random.Next(0, 16);
+            num2 = random.Next(0, 16);
+            num3 = random.Next(0, 16);
+            num4 = random.Next(0, 16);
             randomHex1 = num1.ToString("X");
             randomHex2 = num2.ToString("X");
             randomHex3 = num3.ToString("X");
@@ -135,10 +220,10 @@ namespace Symulator_procesora
             Text_bl.Text = randomHex3 + randomHex4;
 
             //Random CX
-            num1 = random.Next(0, 17);
-            num2 = random.Next(0, 17);
-            num3 = random.Next(0, 17);
-            num4 = random.Next(0, 17);
+            num1 = random.Next(0, 16);
+            num2 = random.Next(0, 16);
+            num3 = random.Next(0, 16);
+            num4 = random.Next(0, 16);
             randomHex1 = num1.ToString("X");
             randomHex2 = num2.ToString("X");
             randomHex3 = num3.ToString("X");
@@ -148,10 +233,10 @@ namespace Symulator_procesora
             Text_cl.Text = randomHex3 + randomHex4;
 
             //Random DX
-            num1 = random.Next(0, 17);
-            num2 = random.Next(0, 17);
-            num3 = random.Next(0, 17);
-            num4 = random.Next(0, 17);
+            num1 = random.Next(0, 16);
+            num2 = random.Next(0, 16);
+            num3 = random.Next(0, 16);
+            num4 = random.Next(0, 16);
             randomHex1 = num1.ToString("X");
             randomHex2 = num2.ToString("X");
             randomHex3 = num3.ToString("X");
