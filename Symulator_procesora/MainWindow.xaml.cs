@@ -281,5 +281,10 @@ namespace Symulator_procesora
             Text_dl.Text = pushDL;
 
         }
+
+        private void b_ax_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
