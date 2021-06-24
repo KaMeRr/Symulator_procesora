@@ -20,8 +20,6 @@ namespace Symulator_procesora
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string[] 
-
         public MainWindow()
         {
             InitializeComponent();
