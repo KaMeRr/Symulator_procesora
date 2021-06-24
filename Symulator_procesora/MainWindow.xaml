@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Symulator_procesora"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="490" Width="718">
+        Title="Symulator Procesora Intel 8086" Height="490" Width="718" Icon="/124138.png">
     <Grid Cursor="Arrow" Margin="0,0,0,-6" Height="464">
         <Grid.RowDefinitions>
             <RowDefinition Height="97*"/>
@@ -19,10 +19,10 @@
             <ColumnDefinition Width="584*"/>
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="Text_ax" Height="32" TextWrapping="NoWrap" Width="54" TextChanged="TextBox_TextChanged" MaxLength="4" MaxLines="1" Cursor="IBeam" Background="White" FontWeight="Bold" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" Margin="57,155,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="Text_dx" Height="32" TextWrapping="NoWrap" Width="54" TextChanged="TextBox_TextChanged" MaxLength="4" MaxLines="1" Cursor="IBeam" Background="White" FontWeight="Bold" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" Margin="57,310,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="Text_cx" HorizontalAlignment="Left" Height="32" Margin="57,259,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="54" TextChanged="TextBox_TextChanged" MaxLength="4" MaxLines="1" Cursor="IBeam" Background="White" FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="Text_bx" HorizontalAlignment="Left" Height="32" Margin="57,203,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="54" TextChanged="TextBox_TextChanged" MaxLength="4" MaxLines="1" Cursor="IBeam" Background="White" FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="Text_ax" Height="32" TextWrapping="NoWrap" Width="99" TextChanged="TextBox_TextChanged" MaxLength="4" MaxLines="1" Cursor="IBeam" Background="White" FontWeight="Bold" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" Margin="57,155,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="Text_dx" Height="32" TextWrapping="NoWrap" Width="99" TextChanged="TextBox_TextChanged" MaxLength="4" MaxLines="1" Cursor="IBeam" Background="White" FontWeight="Bold" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" Margin="57,310,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="Text_cx" HorizontalAlignment="Left" Height="32" Margin="57,259,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="99" TextChanged="TextBox_TextChanged" MaxLength="4" MaxLines="1" Cursor="IBeam" Background="White" FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="Text_bx" HorizontalAlignment="Left" Height="32" Margin="57,203,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="99" TextChanged="TextBox_TextChanged" MaxLength="4" MaxLines="1" Cursor="IBeam" Background="White" FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.ColumnSpan="4"/>
         <Label Content="AX" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="40" FontSize="20" FontWeight="Bold" Margin="17,155,0,0"/>
         <Label Content="DX&#xD;&#xA;" HorizontalAlignment="Left" Height="32" Margin="17,310,0,0" VerticalAlignment="Top" Width="40" FontSize="20" FontWeight="Bold"/>
         <Label Content="CX&#xD;&#xA;" HorizontalAlignment="Left" Height="32" Margin="17,259,0,0" VerticalAlignment="Top" Width="40" FontSize="20" FontWeight="Bold"/>
@@ -43,22 +43,22 @@
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </TextBlock.Background></TextBlock>
-        <TextBox x:Name="Text_ah" HorizontalAlignment="Left" Height="32" Margin="84,155,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="28" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
-        <TextBox x:Name="Text_al" HorizontalAlignment="Left" Height="32" Margin="169,155,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="28" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
-        <Label Content="AH" HorizontalAlignment="Left" Height="32" Margin="42,155,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
-        <Label Content="AL" HorizontalAlignment="Left" Height="32" Margin="132,155,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
-        <TextBox x:Name="Text_bh" HorizontalAlignment="Left" Height="32" Margin="84,203,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="28" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
-        <TextBox x:Name="Text_bl" HorizontalAlignment="Left" Height="32" Margin="169,203,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="28" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
-        <Label Content="BH" HorizontalAlignment="Left" Height="32" Margin="42,203,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
-        <Label Content="BL" HorizontalAlignment="Left" Height="32" Margin="132,203,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
-        <TextBox x:Name="Text_ch" HorizontalAlignment="Left" Height="32" Margin="84,259,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="28" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
-        <TextBox x:Name="Text_cl" HorizontalAlignment="Left" Height="32" Margin="169,259,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="28" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
-        <Label Content="CH" HorizontalAlignment="Left" Height="32" Margin="42,259,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
-        <Label Content="CL" HorizontalAlignment="Left" Height="32" Margin="132,259,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
-        <TextBox x:Name="Text_dh" HorizontalAlignment="Left" Height="32" Margin="84,310,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="28" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
-        <TextBox x:Name="Text_dl" HorizontalAlignment="Left" Height="32" Margin="169,310,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="28" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
-        <Label Content="DH" HorizontalAlignment="Left" Height="32" Margin="42,310,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
-        <Label Content="DL" HorizontalAlignment="Left" Height="32" Margin="132,310,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
+        <TextBox x:Name="Text_ah" HorizontalAlignment="Left" Height="32" Margin="99,155,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="57" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
+        <TextBox x:Name="Text_al" HorizontalAlignment="Left" Height="32" Margin="202,155,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="57" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
+        <Label Content="AH" HorizontalAlignment="Left" Height="32" Margin="62,155,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
+        <Label Content="AL" HorizontalAlignment="Left" Height="32" Margin="165,155,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
+        <TextBox x:Name="Text_bh" HorizontalAlignment="Left" Height="32" Margin="99,203,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="57" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
+        <TextBox x:Name="Text_bl" HorizontalAlignment="Left" Height="32" Margin="202,203,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="57" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
+        <Label Content="BH" HorizontalAlignment="Left" Height="32" Margin="62,203,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
+        <Label Content="BL" HorizontalAlignment="Left" Height="32" Margin="165,203,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
+        <TextBox x:Name="Text_ch" HorizontalAlignment="Left" Height="32" Margin="99,259,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="57" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
+        <TextBox x:Name="Text_cl" HorizontalAlignment="Left" Height="32" Margin="202,259,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="57" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
+        <Label Content="CH" HorizontalAlignment="Left" Height="32" Margin="62,259,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
+        <Label Content="CL" HorizontalAlignment="Left" Height="32" Margin="165,259,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
+        <TextBox x:Name="Text_dh" HorizontalAlignment="Left" Height="32" Margin="99,310,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="57" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
+        <TextBox x:Name="Text_dl" HorizontalAlignment="Left" Height="32" Margin="202,310,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="57" TextChanged="TextBox_TextChanged_2" FontSize="20" TextAlignment="Center" AcceptsReturn="True" MaxLength="2" MaxLines="1" FontWeight="Normal" CharacterCasing="Normal" Cursor="IBeam" Grid.Column="3" Background="#FFF5F0F0"/>
+        <Label Content="DH" HorizontalAlignment="Left" Height="32" Margin="62,310,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
+        <Label Content="DL" HorizontalAlignment="Left" Height="32" Margin="165,310,0,0" VerticalAlignment="Top" Width="37" FontSize="20" Grid.Column="3"/>
         <TextBlock Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="50" Margin="0,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="718" FontSize="36" TextAlignment="Center" FontWeight="UltraBold" FontStyle="Italic">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -82,7 +82,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="Zerowanie" Content="ZEROWANIE" HorizontalAlignment="Left" Height="25" Margin="306,23,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Cursor="Hand" Foreground="White" FontWeight="Normal" Grid.Column="3" Grid.Row="1">
+        <Button x:Name="Zerowanie" Content="ZEROWANIE" HorizontalAlignment="Left" Height="25" Margin="306,23,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Cursor="Hand" Foreground="White" FontWeight="Normal" Grid.Column="3" Grid.Row="1" Click="Zerowanie_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0.77"/>
@@ -90,7 +90,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="Random" Content="LOSOWE" HorizontalAlignment="Left" Height="25" Margin="169,23,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Cursor="Hand" Foreground="White" FontWeight="Normal" Grid.Column="3" Grid.Row="1">
+        <Button x:Name="Random" Content="LOSOWE" HorizontalAlignment="Left" Height="25" Margin="169,23,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Cursor="Hand" Foreground="White" FontWeight="Normal" Grid.Column="3" Grid.Row="1" Click="Random_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0.77"/>
@@ -98,24 +98,25 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TabControl Grid.Column="3" HorizontalAlignment="Left" Height="187" Margin="245,155,0,0" VerticalAlignment="Top" Width="311" RenderTransformOrigin="0.534,1.068">
+        <TabControl Grid.Column="3" HorizontalAlignment="Left" Height="187" Margin="273,155,0,0" VerticalAlignment="Top" Width="311" RenderTransformOrigin="0.534,1.068">
             <TabItem Header="Zdanie 1">
-                <Grid Background="#FFE5E5E5" Height="202" Margin="0,0,-1,0">
+                <Grid Background="#FFE5E5E5" Height="202" Margin="0,0,-9,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="11*"/>
-                        <ColumnDefinition Width="29*"/>
-                        <ColumnDefinition Width="113*"/>
+                        <ColumnDefinition Width="23*"/>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="79*"/>
+                        <ColumnDefinition Width="153*"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="20" Grid.ColumnSpan="3" FontSize="14" TextDecorations="Underline" Text="Element bazowy:" TextAlignment="Center"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="73,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="20" FontSize="14" TextDecorations="Underline" Text="Element docelowy:" TextAlignment="Center" Grid.Column="2"/>
-                    <RadioButton x:Name="b_ax" Content="AX" HorizontalAlignment="Left" Height="14" Margin="42,53,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="1" Cursor="Hand" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                    <RadioButton x:Name="b_bx" Content="BX" HorizontalAlignment="Left" Height="14" Margin="42,72,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="1" Cursor="Hand" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                    <RadioButton x:Name="b_cx" Content="CX" HorizontalAlignment="Left" Height="14" Margin="42,91,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="1" Cursor="Hand" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                    <RadioButton x:Name="b_dx" Content="DX" HorizontalAlignment="Left" Height="14" Margin="42,110,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="1" Cursor="Hand" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
-                    <RadioButton x:Name="c_ax" Content="AX" HorizontalAlignment="Left" Height="14" Margin="126,53,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="2" Cursor="Hand" VerticalContentAlignment="Center"/>
-                    <RadioButton x:Name="c_bx" Content="BX" HorizontalAlignment="Left" Height="14" Margin="126,72,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="2" Cursor="Hand" VerticalContentAlignment="Center"/>
-                    <RadioButton x:Name="c_cx" Content="CX" HorizontalAlignment="Left" Height="14" Margin="126,91,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="2" Cursor="Hand" VerticalContentAlignment="Center"/>
-                    <RadioButton x:Name="c_dx" Content="DX" HorizontalAlignment="Left" Height="14" Margin="126,110,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="2" Cursor="Hand" VerticalContentAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="73,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="20" FontSize="14" TextDecorations="Underline" Text="Element docelowy:" TextAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <RadioButton x:Name="b_ax" Content="AX" HorizontalAlignment="Left" Height="14" Margin="42,53,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="1" Cursor="Hand" VerticalContentAlignment="Center" Grid.ColumnSpan="3"/>
+                    <RadioButton x:Name="b_bx" Content="BX" HorizontalAlignment="Left" Height="14" Margin="42,72,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="1" Cursor="Hand" VerticalContentAlignment="Center" Grid.ColumnSpan="3"/>
+                    <RadioButton x:Name="b_cx" Content="CX" HorizontalAlignment="Left" Height="14" Margin="42,91,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="1" Cursor="Hand" VerticalContentAlignment="Center" Grid.ColumnSpan="3"/>
+                    <RadioButton x:Name="b_dx" Content="DX" HorizontalAlignment="Left" Height="14" Margin="42,110,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="1" Cursor="Hand" VerticalContentAlignment="Center" Grid.ColumnSpan="3"/>
+                    <RadioButton x:Name="c_ax" Content="AX" HorizontalAlignment="Left" Height="14" Margin="47,53,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="3" Cursor="Hand" VerticalContentAlignment="Center"/>
+                    <RadioButton x:Name="c_bx" Content="BX" HorizontalAlignment="Left" Height="14" Margin="47,72,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="3" Cursor="Hand" VerticalContentAlignment="Center"/>
+                    <RadioButton x:Name="c_cx" Content="CX" HorizontalAlignment="Left" Height="14" Margin="47,91,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="3" Cursor="Hand" VerticalContentAlignment="Center"/>
+                    <RadioButton x:Name="c_dx" Content="DX" HorizontalAlignment="Left" Height="14" Margin="47,110,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Grid.Column="3" Cursor="Hand" VerticalContentAlignment="Center"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Zadanie 2">
@@ -145,7 +146,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button x:Name="Pop" Content="Pop" HorizontalAlignment="Left" Height="25" Margin="454,23,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Cursor="Hand" Foreground="White" FontWeight="Normal" Grid.Column="3" Grid.Row="1">
+        <Button x:Name="Pop" Content="Pop" HorizontalAlignment="Left" Height="25" Margin="454,23,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Cursor="Hand" Foreground="White" FontWeight="Normal" Grid.Column="3" Grid.Row="1" Click="Pop_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0.77"/>
@@ -153,7 +154,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="Push" Content="PUSH" HorizontalAlignment="Left" Height="25" Margin="454,381,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Cursor="Hand" Foreground="White" FontWeight="Normal" Grid.Column="3" Grid.RowSpan="2">
+        <Button x:Name="Push" Content="PUSH" HorizontalAlignment="Left" Height="25" Margin="454,381,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Cursor="Hand" Foreground="White" FontWeight="Normal" Grid.Column="3" Grid.RowSpan="2" Click="Push_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0.77"/>
