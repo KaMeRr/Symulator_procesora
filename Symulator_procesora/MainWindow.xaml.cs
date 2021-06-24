@@ -40,6 +40,20 @@ namespace Symulator_procesora
             Text_dl.Text = string.Empty;
         }
 
+        public string pushAX = string.Empty;
+        public string pushBX = string.Empty;
+        public string pushCX = string.Empty;
+        public string pushDX = string.Empty;
+
+        public string pushAH = string.Empty;
+        public string pushAL = string.Empty;
+        public string pushBH = string.Empty;
+        public string pushBL = string.Empty;
+        public string pushCH = string.Empty;
+        public string pushCL = string.Empty;
+        public string pushDH = string.Empty;
+        public string pushDL = string.Empty;
+
         //private void textBox1_Validating(object sender, CancelEventArgs e)
         //{
         //    char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
@@ -149,38 +163,38 @@ namespace Symulator_procesora
 
         public void Push_Click(object sender, RoutedEventArgs e)
         {
-            string pushAX = Text_ax.Text;
-            string pushBX = Text_ax.Text;
-            string pushCX = Text_ax.Text;
-            string pushDX = Text_ax.Text;
+            pushAX = Text_ax.Text;
+            pushBX = Text_bx.Text;
+            pushCX = Text_cx.Text;
+            pushDX = Text_dx.Text;
 
-            string pushAH = Text_ax.Text;
-            string pushAL = Text_ax.Text;
-            string pushBH = Text_ax.Text;
-            string pushBL = Text_ax.Text;
-            string pushCH = Text_ax.Text;
-            string pushCL = Text_ax.Text;
-            string pushDH = Text_ax.Text;
-            string pushDL = Text_ax.Text;
+            pushAH = Text_ah.Text;
+            pushAL = Text_al.Text;
+            pushBH = Text_bh.Text;
+            pushBL = Text_bl.Text;
+            pushCH = Text_ch.Text;
+            pushCL = Text_cl.Text;
+            pushDH = Text_dh.Text;
+            pushDL = Text_dl.Text;
         }
 
 
         private void Pop_Click(object sender, RoutedEventArgs e)
         {
             Text_ax.Text = pushAX;
-            string pushAX = Text_ax.Text;
-            string pushBX = Text_ax.Text;
-            string pushCX = Text_ax.Text;
-            string pushDX = Text_ax.Text;
+            Text_bx.Text = pushBX;
+            Text_cx.Text = pushCX;
+            Text_dx.Text = pushDX;
 
-            string pushAH = Text_ax.Text;
-            string pushAL = Text_ax.Text;
-            string pushBH = Text_ax.Text;
-            string pushBL = Text_ax.Text;
-            string pushCH = Text_ax.Text;
-            string pushCL = Text_ax.Text;
-            string pushDH = Text_ax.Text;
-            string pushDL = Text_ax.Text;
+            Text_ah.Text = pushAH;
+            Text_al.Text = pushAL;
+            Text_bh.Text = pushBH;
+            Text_bl.Text = pushBL;
+            Text_ch.Text = pushCH;
+            Text_cl.Text = pushCL;
+            Text_dh.Text = pushDH;
+            Text_dl.Text = pushDL;
+
         }
     }
 }
