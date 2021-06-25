@@ -46,41 +46,11 @@ namespace Symulator_procesora
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+            //char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
 
 
-            foreach (char character in Text_ax.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_ax.Text = Text_ax.Text.Substring(0, Text_ax.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_bx.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_bx.Text = Text_bx.Text.Substring(0, Text_bx.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_cx.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_cx.Text = Text_cx.Text.Substring(0, Text_cx.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_dx.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_dx.Text = Text_dx.Text.Substring(0, Text_dx.Text.Length - 1);
-                }
-            }
+
+
 
             // Text_ah.Text = Text_ax.Text.Substring(1, 2);
             //  Text_al.Text = Text_ax.Text.Substring(3);
@@ -108,79 +78,311 @@ namespace Symulator_procesora
 
         }
 
-        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
+        private void TextBox_TextChanged_AX(object sender, TextChangedEventArgs e)
         {
             char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
 
-            foreach (char character in Text_ah.Text.ToUpper().ToArray())
+            foreach (char character in Text_ax.Text.ToUpper().ToArray())
             {
                 if (!allowedChars.Contains(character))
                 {
                     MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_ah.Text = Text_ah.Text.Substring(0, Text_ah.Text.Length - 1);
+                    Text_ax.Text = Text_ax.Text.Substring(0, Text_ax.Text.Length - 1);
                 }
             }
-            foreach (char character in Text_al.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_al.Text = Text_al.Text.Substring(0, Text_al.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_bh.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_bh.Text = Text_bh.Text.Substring(0, Text_bh.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_bl.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_bl.Text = Text_bl.Text.Substring(0, Text_bl.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_ch.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_ch.Text = Text_ch.Text.Substring(0, Text_ch.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_cl.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_cl.Text = Text_cl.Text.Substring(0, Text_cl.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_dh.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_dh.Text = Text_dh.Text.Substring(0, Text_dh.Text.Length - 1);
-                }
-            }
-            foreach (char character in Text_dl.Text.ToUpper().ToArray())
-            {
-                if (!allowedChars.Contains(character))
-                {
-                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Text_dl.Text = Text_dl.Text.Substring(0, Text_dl.Text.Length - 1);
-                }
-            }
+            char[] tablica = Text_ax.Text.ToCharArray();
 
-            Text_ax.Text = Text_ah.Text + Text_al.Text;
-            Text_bx.Text = Text_bh.Text + Text_bl.Text;
-            Text_cx.Text = Text_ch.Text + Text_cl.Text;
-            Text_dx.Text = Text_dh.Text + Text_dl.Text;
+            if (Text_ax.Text.Length == 1)
+            {
+                char CH1 = tablica[0];
+                string x1 = string.Join("", CH1);
+
+                Text_ah.Text = x1;
+            }
+            else if (Text_ax.Text.Length == 2)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+
+                Text_ah.Text = x1 + x2;
+            }
+            else if (Text_ax.Text.Length == 3)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                char CH3 = tablica[2];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+                string x3 = string.Join("", CH3);
+
+                Text_ah.Text = x1 + x2;
+                Text_al.Text = x3;
+            }
+            else if (Text_ax.Text.Length == 4)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                char CH3 = tablica[2];
+                char CH4 = tablica[3];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+                string x3 = string.Join("", CH3);
+                string x4 = string.Join("", CH4);
+
+                Text_ah.Text = x1 + x2;
+                Text_al.Text = x3 + x4;
+            }
+        }
+
+        private void TextBox_TextChanged_BX(object sender, TextChangedEventArgs e)
+        {
+            char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+
+            foreach (char character in Text_bx.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_bx.Text = Text_bx.Text.Substring(0, Text_bx.Text.Length - 1);
+                }
+            }
+            char[] tablica = Text_bx.Text.ToCharArray();
+
+            if (Text_bx.Text.Length == 1)
+            {
+                char CH1 = tablica[0];
+                string x1 = string.Join("", CH1);
+
+                Text_bh.Text = x1;
+            }
+            else if (Text_bx.Text.Length == 2)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+
+                Text_bh.Text = x1 + x2;
+            }
+            else if (Text_bx.Text.Length == 3)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                char CH3 = tablica[2];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+                string x3 = string.Join("", CH3);
+
+                Text_bh.Text = x1 + x2;
+                Text_bl.Text = x3;
+            }
+            else if (Text_bx.Text.Length == 4)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                char CH3 = tablica[2];
+                char CH4 = tablica[3];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+                string x3 = string.Join("", CH3);
+                string x4 = string.Join("", CH4);
+
+                Text_bh.Text = x1 + x2;
+                Text_bl.Text = x3 + x4;
+            }
+        }
+
+        private void TextBox_TextChanged_CX(object sender, TextChangedEventArgs e)
+        {
+            char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+
+            foreach (char character in Text_cx.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_cx.Text = Text_cx.Text.Substring(0, Text_cx.Text.Length - 1);
+                }
+            }
+            char[] tablica = Text_cx.Text.ToCharArray();
+
+            if (Text_cx.Text.Length == 1)
+            {
+                char CH1 = tablica[0];
+                string x1 = string.Join("", CH1);
+
+                Text_ch.Text = x1;
+            }
+            else if (Text_cx.Text.Length == 2)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+
+                Text_ch.Text = x1 + x2;
+            }
+            else if (Text_cx.Text.Length == 3)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                char CH3 = tablica[2];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+                string x3 = string.Join("", CH3);
+
+                Text_ch.Text = x1 + x2;
+                Text_cl.Text = x3;
+            }
+            else if (Text_cx.Text.Length == 4)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                char CH3 = tablica[2];
+                char CH4 = tablica[3];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+                string x3 = string.Join("", CH3);
+                string x4 = string.Join("", CH4);
+
+                Text_ch.Text = x1 + x2;
+                Text_cl.Text = x3 + x4;
+            }
+        }
+
+        private void TextBox_TextChanged_DX(object sender, TextChangedEventArgs e)
+        {
+            char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+
+            foreach (char character in Text_dx.Text.ToUpper().ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    Text_dx.Text = Text_dx.Text.Substring(0, Text_dx.Text.Length - 1);
+                }
+            }
+            char[] tablica = Text_dx.Text.ToCharArray();
+
+            if (Text_dx.Text.Length == 1)
+            {
+                char CH1 = tablica[0];
+                string x1 = string.Join("", CH1);
+
+                Text_dh.Text = x1;
+            }
+            else if (Text_dx.Text.Length == 2)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+
+                Text_dh.Text = x1 + x2;
+            }
+            else if (Text_dx.Text.Length == 3)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                char CH3 = tablica[2];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+                string x3 = string.Join("", CH3);
+
+                Text_dh.Text = x1 + x2;
+                Text_dl.Text = x3;
+            }
+            else if (Text_dx.Text.Length == 4)
+            {
+                char CH1 = tablica[0];
+                char CH2 = tablica[1];
+                char CH3 = tablica[2];
+                char CH4 = tablica[3];
+                string x1 = string.Join("", CH1);
+                string x2 = string.Join("", CH2);
+                string x3 = string.Join("", CH3);
+                string x4 = string.Join("", CH4);
+
+                Text_dh.Text = x1 + x2;
+                Text_dl.Text = x3 + x4;
+            }
+        }
+
+        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+            //char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+
+            //foreach (char character in Text_ah.Text.ToUpper().ToArray())
+            //{
+            //    if (!allowedChars.Contains(character))
+            //    {
+            //        MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        Text_ah.Text = Text_ah.Text.Substring(0, Text_ah.Text.Length - 1);
+            //    }
+            //}
+            //foreach (char character in Text_al.Text.ToUpper().ToArray())
+            //{
+            //    if (!allowedChars.Contains(character))
+            //    {
+            //        MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        Text_al.Text = Text_al.Text.Substring(0, Text_al.Text.Length - 1);
+            //    }
+            //}
+            //foreach (char character in Text_bh.Text.ToUpper().ToArray())
+            //{
+            //    if (!allowedChars.Contains(character))
+            //    {
+            //        MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        Text_bh.Text = Text_bh.Text.Substring(0, Text_bh.Text.Length - 1);
+            //    }
+            //}
+            //foreach (char character in Text_bl.Text.ToUpper().ToArray())
+            //{
+            //    if (!allowedChars.Contains(character))
+            //    {
+            //        MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        Text_bl.Text = Text_bl.Text.Substring(0, Text_bl.Text.Length - 1);
+            //    }
+            //}
+            //foreach (char character in Text_ch.Text.ToUpper().ToArray())
+            //{
+            //    if (!allowedChars.Contains(character))
+            //    {
+            //        MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        Text_ch.Text = Text_ch.Text.Substring(0, Text_ch.Text.Length - 1);
+            //    }
+            //}
+            //foreach (char character in Text_cl.Text.ToUpper().ToArray())
+            //{
+            //    if (!allowedChars.Contains(character))
+            //    {
+            //        MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        Text_cl.Text = Text_cl.Text.Substring(0, Text_cl.Text.Length - 1);
+            //    }
+            //}
+            //foreach (char character in Text_dh.Text.ToUpper().ToArray())
+            //{
+            //    if (!allowedChars.Contains(character))
+            //    {
+            //        MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        Text_dh.Text = Text_dh.Text.Substring(0, Text_dh.Text.Length - 1);
+            //    }
+            //}
+            //foreach (char character in Text_dl.Text.ToUpper().ToArray())
+            //{
+            //    if (!allowedChars.Contains(character))
+            //    {
+            //        MessageBox.Show($"{character} nie jest wartością hexadecymalną!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //        Text_dl.Text = Text_dl.Text.Substring(0, Text_dl.Text.Length - 1);
+            //    }
+            //}
+
+            //Text_ax.Text = Text_ah.Text + Text_al.Text;
+            //Text_bx.Text = Text_bh.Text + Text_bl.Text;
+            //Text_cx.Text = Text_ch.Text + Text_cl.Text;
+            //Text_dx.Text = Text_dh.Text + Text_dl.Text;
         }
 
         //private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
