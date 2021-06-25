@@ -301,58 +301,194 @@ namespace Symulator_procesora
         {
             MOV_b = MOV_a;
 
-            if (c_ax.IsChecked == true)
+            if (b_ax.IsChecked == false && b_bx.IsChecked == false && b_cx.IsChecked == false && b_dx.IsChecked == false && b_dx.IsChecked == false && b_ah.IsChecked == false && b_al.IsChecked == false && b_bh.IsChecked == false && b_bl.IsChecked == false && b_ch.IsChecked == false && b_cl.IsChecked == false && b_dh.IsChecked == false && b_dl.IsChecked == false)
             {
-                Text_ax.Text = MOV_b;
+                MessageBox.Show("Musisz zaznaczyć element bazowy!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if (c_bx.IsChecked == true)
+            else
             {
-                Text_bx.Text = MOV_b;
+                if (string.IsNullOrEmpty(MOV_a))
+                {
+                    MessageBox.Show("Uzupełnij element bazowy i odśwież!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    if (c_ax.IsChecked == true)
+                    {
+                        Text_ax.Text = MOV_b;
+                    }
+                    else if (c_bx.IsChecked == true)
+                    {
+                        Text_bx.Text = MOV_b;
+                    }
+                    else if (c_cx.IsChecked == true)
+                    {
+                        Text_cx.Text = MOV_b;
+                    }
+                    else if (c_dx.IsChecked == true)
+                    {
+                        Text_dx.Text = MOV_b;
+                    }
+                    else if (c_ah.IsChecked == true)
+                    {
+                        Text_ah.Text = MOV_b;
+                    }
+                    else if (c_al.IsChecked == true)
+                    {
+                        Text_al.Text = MOV_b;
+                    }
+                    else if (c_bh.IsChecked == true)
+                    {
+                        Text_bh.Text = MOV_b;
+                    }
+                    else if (c_bl.IsChecked == true)
+                    {
+                        Text_bl.Text = MOV_b;
+                    }
+                    else if (c_ch.IsChecked == true)
+                    {
+                        Text_ch.Text = MOV_b;
+                    }
+                    else if (c_cl.IsChecked == true)
+                    {
+                        Text_cl.Text = MOV_b;
+                    }
+                    else if (c_dh.IsChecked == true)
+                    {
+                        Text_dh.Text = MOV_b;
+                    }
+                    else if (c_dl.IsChecked == true)
+                    {
+                        Text_dl.Text = MOV_b;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Musisz zaznaczyć element docelowy by wykonać polecenie MOV!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
             }
-            else if (c_cx.IsChecked == true)
-            {
-                Text_cx.Text = MOV_b;
-            }
-            else if (c_dx.IsChecked == true)
-            {
-                Text_dx.Text = MOV_b;
-            }
-            else if (c_ah.IsChecked == true)
-            {
-                Text_ah.Text = MOV_b;
-            }
-            else if (c_al.IsChecked == true)
-            {
-                Text_al.Text = MOV_b;
-            }
-            else if (c_bh.IsChecked == true)
-            {
-                Text_bh.Text = MOV_b;
-            }
-            else if (c_bl.IsChecked == true)
-            {
-                Text_bl.Text = MOV_b;
-            }
-            else if (c_ch.IsChecked == true)
-            {
-                Text_ch.Text = MOV_b;
-            }
-            else if (c_cl.IsChecked == true)
-            {
-                Text_cl.Text = MOV_b;
-            }
-            else if (c_dh.IsChecked == true)
-            {
-                Text_dh.Text = MOV_b;
-            }
-            else if (c_dl.IsChecked == true)
-            {
-                Text_dl.Text = MOV_b;
-            }
+           
 
         }
         private void XCHG_Click(object sender, RoutedEventArgs e)
         {
+            string XCHG_c = XCHG_a;
+            XCHG_a = XCHG_b;
+            XCHG_b = XCHG_c;
+
+            if (string.IsNullOrEmpty(XCHG_a) || string.IsNullOrEmpty(XCHG_b))
+            {
+                MessageBox.Show("Wybierz oraz uzupełnij oba elementy, potem odśwież!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                if (b_ax.IsChecked == true)
+                {
+                    Text_ax.Text = XCHG_a;
+                }
+                else if (b_bx.IsChecked == true)
+                {
+                    Text_bx.Text = XCHG_a;
+                }
+                else if (b_cx.IsChecked == true)
+                {
+                    Text_cx.Text = XCHG_a;
+                }
+                else if (b_dx.IsChecked == true)
+                {
+                    Text_dx.Text = XCHG_a;
+                }
+                else if (b_ah.IsChecked == true)
+                {
+                    Text_ah.Text = XCHG_a;
+                }
+                else if (b_al.IsChecked == true)
+                {
+                    Text_al.Text = XCHG_a;
+                }
+                else if (b_bh.IsChecked == true)
+                {
+                    Text_bh.Text = XCHG_a;
+                }
+                else if (b_bl.IsChecked == true)
+                {
+                    Text_bl.Text = XCHG_a;
+                }
+                else if (b_ch.IsChecked == true)
+                {
+                    Text_ch.Text = XCHG_a;
+                }
+                else if (b_cl.IsChecked == true)
+                {
+                    Text_cl.Text = XCHG_a;
+                }
+                else if (b_dh.IsChecked == true)
+                {
+                    Text_dh.Text = XCHG_a;
+                }
+                else if (b_dl.IsChecked == true)
+                {
+                    Text_dl.Text = XCHG_a;
+                }
+                else
+                {
+                    MessageBox.Show("Musisz zaznaczyć element bazowy by wykonać polecenie XCHG!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                //
+                if (c_ax.IsChecked == true)
+                {
+                    Text_ax.Text = XCHG_b;
+                }
+                else if (c_bx.IsChecked == true)
+                {
+                    Text_bx.Text = XCHG_b;
+                }
+                else if (c_cx.IsChecked == true)
+                {
+                    Text_cx.Text = XCHG_b;
+                }
+                else if (c_dx.IsChecked == true)
+                {
+                    Text_dx.Text = XCHG_b;
+                }
+                else if (c_ah.IsChecked == true)
+                {
+                    Text_ah.Text = XCHG_b;
+                }
+                else if (c_al.IsChecked == true)
+                {
+                    Text_al.Text = XCHG_b;
+                }
+                else if (c_bh.IsChecked == true)
+                {
+                    Text_bh.Text = XCHG_b;
+                }
+                else if (c_bl.IsChecked == true)
+                {
+                    Text_bl.Text = XCHG_b;
+                }
+                else if (c_ch.IsChecked == true)
+                {
+                    Text_ch.Text = XCHG_b;
+                }
+                else if (c_cl.IsChecked == true)
+                {
+                    Text_cl.Text = XCHG_b;
+                }
+                else if (c_dh.IsChecked == true)
+                {
+                    Text_dh.Text = XCHG_b;
+                }
+                else if (c_dl.IsChecked == true)
+                {
+                    Text_dl.Text = XCHG_b;
+                }
+                else
+                {
+                    MessageBox.Show("Musisz zaznaczyć element docelowy by wykonać polecenie XCHG!", "Błąd!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            
 
         }
         ///////////////////////////////////////////////////////////////////////////////////////
